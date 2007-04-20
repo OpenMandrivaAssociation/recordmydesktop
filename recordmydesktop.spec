@@ -1,6 +1,6 @@
 Summary:	Desktop session recorder
 Name:		recordmydesktop
-Version:	0.3.3.1
+Version:	0.3.4
 Release:	%mkrel 1
 License:	GPL
 Group:		Video
@@ -48,5 +48,3 @@ container.
 %doc AUTHORS ChangeLog README COPYING
 %attr(755,root,root) %{_bindir}/%{name}
 %{_mandir}/man1/recordmydesktop.1*
-
-
