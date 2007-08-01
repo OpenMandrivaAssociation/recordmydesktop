@@ -1,7 +1,7 @@
 Summary:	Desktop session recorder
 Name:		recordmydesktop
 Version:	0.3.5.1
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPL
 Group:		Video
 URL:		http://recordmydesktop.sourceforge.net/
@@ -28,11 +28,9 @@ container.
 %setup -q
 
 %build
-
 %configure2_5x \
 	--enable-oss=no \
-	--enable-jack=no \
-	--with-x
+	--enable-jack=no
 
 %make
 
