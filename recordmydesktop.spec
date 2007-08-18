@@ -1,12 +1,11 @@
 Summary:	Desktop session recorder
 Name:		recordmydesktop
-Version:	0.3.5.1
-Release:	%mkrel 3
+Version:	0.3.6
+Release:	%mkrel 1
 License:	GPL
 Group:		Video
 URL:		http://recordmydesktop.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/recordmydesktop/%{name}-%{version}.tar.bz2
-Patch0:		rmd-0.3.5.1.patch
 BuildRequires:	libalsa-devel
 BuildRequires:	libogg-devel
 BuildRequires:	libtheora-devel
@@ -27,7 +26,6 @@ container.
 
 %prep
 %setup -q
-%patch -p0
 
 %build
 %configure2_5x \
@@ -45,7 +43,7 @@ container.
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
 
 %files
-%defattr(644,root,root,755)
+%defattr(-,root,root)
 %doc AUTHORS ChangeLog README COPYING
-%attr(755,root,root) %{_bindir}/%{name}
+%{_bindir}/%{name}
 %{_mandir}/man1/recordmydesktop.1*
