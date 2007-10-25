@@ -1,11 +1,13 @@
 Summary:	Desktop session recorder
 Name:		recordmydesktop
 Version:	0.3.6
-Release:	%mkrel 1
+Release:	%mkrel 2
 License:	GPL
 Group:		Video
-URL:		http://recordmydesktop.sourceforge.net/
+URL:		http://recordmydesktop.iovar.org/	
 Source0:	http://downloads.sourceforge.net/recordmydesktop/%{name}-%{version}.tar.bz2
+# (fc) 0.3.6-2mdv fix jack library dlopen
+Patch0:		recordmydesktop-0.3.6-fixjacksoname.patch
 BuildRequires:	libalsa-devel
 BuildRequires:	libogg-devel
 BuildRequires:	libtheora-devel
@@ -16,6 +18,7 @@ BuildRequires:	libxdamage-devel
 BuildRequires:	libxext-devel
 BuildRequires:	libxfixes-devel
 BuildRequires:	zlib-devel
+BuildRequires:  jackit-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
@@ -26,11 +29,11 @@ container.
 
 %prep
 %setup -q
+%patch0 -p1 -b .fixjacksoname
 
 %build
 %configure2_5x \
-	--enable-oss=no \
-	--enable-jack=no
+	--enable-oss=no
 
 %make
 
