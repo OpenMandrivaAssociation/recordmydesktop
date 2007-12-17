@@ -19,7 +19,6 @@ BuildRequires:	libxext-devel
 BuildRequires:	libxfixes-devel
 BuildRequires:	zlib-devel
 BuildRequires:  jackit-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Simple command line tool that performs the basic tasks of capturing
