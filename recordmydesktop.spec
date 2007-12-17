@@ -1,8 +1,8 @@
 Summary:	Desktop session recorder
 Name:		recordmydesktop
-Version:	0.3.6
-Release:	%mkrel 2
-License:	GPL
+Version:	0.3.7
+Release:	%mkrel 1
+License:	GPLv2+
 Group:		Video
 URL:		http://recordmydesktop.iovar.org/	
 Source0:	http://downloads.sourceforge.net/recordmydesktop/%{name}-%{version}.tar.bz2
@@ -46,6 +46,6 @@ container.
 
 %files
 %defattr(-,root,root)
-%doc AUTHORS ChangeLog README COPYING
+%doc AUTHORS ChangeLog README
 %{_bindir}/%{name}
 %{_mandir}/man1/recordmydesktop.1*
