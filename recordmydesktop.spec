@@ -1,6 +1,6 @@
 Summary:	Desktop session recorder
 Name:		recordmydesktop
-Version:	0.3.7
+Version:	0.3.7.1
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Video
