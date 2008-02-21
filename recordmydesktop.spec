@@ -1,6 +1,6 @@
 Summary:	Desktop session recorder
 Name:		recordmydesktop
-Version:	0.3.7.1
+Version:	0.3.7.3
 Release:	%mkrel 1
 License:	GPLv2+
 Group:		Video
@@ -33,7 +33,8 @@ container.
 
 %build
 %configure2_5x \
-	--enable-oss=no
+	--enable-oss=no \
+	--enable-jack=yes
 
 %make
 
