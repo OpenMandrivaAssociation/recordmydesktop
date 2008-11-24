@@ -1,13 +1,11 @@
 Summary:	Desktop session recorder
 Name:		recordmydesktop
-Version:	0.3.7.3
-Release:	%mkrel 4
+Version:	0.3.8
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Video
 URL:		http://recordmydesktop.iovar.org/	
 Source0:	http://downloads.sourceforge.net/recordmydesktop/%{name}-%{version}.tar.bz2
-# (fc) 0.3.6-2mdv fix jack library dlopen
-Patch0:		recordmydesktop-0.3.6-fixjacksoname.patch
 BuildRequires:	libalsa-devel
 BuildRequires:	libogg-devel
 BuildRequires:	libtheora-devel
@@ -29,7 +27,6 @@ container.
 
 %prep
 %setup -q
-%patch0 -p1 -b .fixjacksoname
 
 %build
 %configure2_5x \
