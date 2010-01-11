@@ -1,7 +1,7 @@
 Summary:	Desktop session recorder
 Name:		recordmydesktop
 Version:	0.3.8.1
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	GPLv2+
 Group:		Video
 URL:		http://recordmydesktop.sourceforge.net/
