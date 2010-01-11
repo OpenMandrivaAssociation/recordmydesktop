@@ -1,12 +1,14 @@
 Summary:	Desktop session recorder
 Name:		recordmydesktop
 Version:	0.3.8.1
-Release:	%mkrel 3
+Release:	%mkrel 4
 License:	GPLv2+
 Group:		Video
 URL:		http://recordmydesktop.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/recordmydesktop/%{name}-%{version}.tar.bz2
 Patch0:		recordmydesktop-fix-libtheora1.1.patch
+Patch1:		recordmydesktop-fix-xorg-headers-1.patch
+Patch2:		recordmydesktop-fix-xorg-headers-2.patch
 BuildRequires:	libalsa-devel
 BuildRequires:	libogg-devel
 BuildRequires:	libtheora-devel
@@ -30,6 +32,8 @@ container.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
+%patch2 -p1
 
 %build
 %configure2_5x \
