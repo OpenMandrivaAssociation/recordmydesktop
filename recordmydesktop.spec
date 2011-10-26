@@ -1,7 +1,7 @@
 Summary:    Desktop session recorder
 Name:       recordmydesktop
 Version:    0.3.8.1
-Release:    %mkrel 6
+Release:    7
 License:    GPLv2+
 Group:      Video
 URL:        http://recordmydesktop.sourceforge.net/
@@ -22,7 +22,6 @@ BuildRequires:  libxfixes-devel
 BuildRequires:  zlib-devel
 BuildRequires:  jackit-devel
 Requires:   jackit-example-clients
-BuildRoot:  %{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Simple command line tool that performs the basic tasks of capturing
