@@ -1,27 +1,27 @@
-Summary:    Desktop session recorder
-Name:       recordmydesktop
-Version:    0.3.8.1
-Release:    7
-License:    GPLv2+
-Group:      Video
-URL:        http://recordmydesktop.sourceforge.net/
-Source0:    http://downloads.sourceforge.net/recordmydesktop/%{name}-%{version}.tar.bz2
-Patch0:     recordmydesktop-fix-libtheora1.1.patch
-Patch1:     recordmydesktop-fix-xorg-headers-1.patch
-Patch2:     recordmydesktop-fix-xorg-headers-2.patch
-Patch3:     recordmydesktop-fix-havejack.patch
-BuildRequires:  libalsa-devel
-BuildRequires:  libogg-devel
-BuildRequires:  libtheora-devel
-BuildRequires:  libvorbis-devel
-BuildRequires:  libice-devel
-BuildRequires:  libsm-devel
-BuildRequires:  libxdamage-devel
-BuildRequires:  libxext-devel
-BuildRequires:  libxfixes-devel
-BuildRequires:  zlib-devel
-BuildRequires:  jackit-devel
-Requires:   jackit-example-clients
+Summary:	Desktop session recorder
+Name:		recordmydesktop
+Version:	0.3.8.1
+Release:	8
+License:	GPLv2+
+Group:		Video
+URL:		http://recordmydesktop.sourceforge.net/
+Source0:	http://downloads.sourceforge.net/recordmydesktop/%{name}-%{version}.tar.bz2
+Patch0:		recordmydesktop-fix-libtheora1.1.patch
+Patch1:		recordmydesktop-fix-xorg-headers-1.patch
+Patch2:		recordmydesktop-fix-xorg-headers-2.patch
+Patch3:		recordmydesktop-fix-havejack.patch
+BuildRequires:	libalsa-devel
+BuildRequires:	libogg-devel
+BuildRequires:	libtheora-devel
+BuildRequires:	libvorbis-devel
+BuildRequires:	libice-devel
+BuildRequires:	libsm-devel
+BuildRequires:	libxdamage-devel
+BuildRequires:	libxext-devel
+BuildRequires:	libxfixes-devel
+BuildRequires:	zlib-devel
+BuildRequires:	jackit-devel
+Requires:		jackit-example-clients
 
 %description
 Simple command line tool that performs the basic tasks of capturing
@@ -44,15 +44,9 @@ container.
 %make
 
 %install
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
-
 %makeinstall_std
 
-%clean
-[ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc AUTHORS ChangeLog README
 %{_bindir}/%{name}
 %{_mandir}/man1/recordmydesktop.1*
