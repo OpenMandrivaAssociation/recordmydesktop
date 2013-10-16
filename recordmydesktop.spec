@@ -1,7 +1,7 @@
 Summary:	Desktop session recorder
 Name:		recordmydesktop
 Version:	0.3.8.1
-Release:	8
+Release:	9
 License:	GPLv2+
 Group:		Video
 URL:		http://recordmydesktop.sourceforge.net/
