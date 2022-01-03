@@ -7,8 +7,8 @@ Group:		Video
 URL:		http://recordmydesktop.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/recordmydesktop/%{name}-%{version}.tar.gz
 
-BuildRequires:	libalsa-devel
-BuildRequires:	libogg-devel
+BuildRequires:	pkgconfig(alsa)
+BuildRequires:	pkgconfig(ogg)
 BuildRequires:  pkgconfig(popt)
 BuildRequires:	pkgconfig(theora)
 BuildRequires:	pkgconfig(vorbis)
