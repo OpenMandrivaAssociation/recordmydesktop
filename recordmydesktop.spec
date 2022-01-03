@@ -35,10 +35,10 @@ container.
     --enable-oss=no \
     --enable-jack=yes
 
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc AUTHORS ChangeLog README
