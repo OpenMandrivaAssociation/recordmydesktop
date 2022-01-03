@@ -1,17 +1,15 @@
 Summary:	Desktop session recorder
 Name:		recordmydesktop
-Version:	0.3.8.1
-Release:	11
+Version:	0.4.0
+Release:	1
 License:	GPLv2+
 Group:		Video
 URL:		http://recordmydesktop.sourceforge.net/
-Source0:	http://downloads.sourceforge.net/recordmydesktop/%{name}-%{version}.tar.bz2
-Patch0:		recordmydesktop-fix-libtheora1.1.patch
-Patch1:		recordmydesktop-fix-xorg-headers-1.patch
-Patch2:		recordmydesktop-fix-xorg-headers-2.patch
-Patch3:		recordmydesktop-fix-havejack.patch
+Source0:	http://downloads.sourceforge.net/recordmydesktop/%{name}-%{version}.tar.gz
+
 BuildRequires:	libalsa-devel
 BuildRequires:	libogg-devel
+BuildRequires:  pkgconfig(popt)
 BuildRequires:	pkgconfig(theora)
 BuildRequires:	pkgconfig(vorbis)
 BuildRequires:	pkgconfig(ice)
@@ -31,20 +29,16 @@ container.
 
 %prep
 %setup -q
-%patch0 -p1
-%patch1 -p1
-%patch2 -p1
-%patch3 -p1
 
 %build
 %configure \
     --enable-oss=no \
     --enable-jack=yes
 
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc AUTHORS ChangeLog README
