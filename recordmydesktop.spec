@@ -9,6 +9,7 @@ Source0:	http://downloads.sourceforge.net/recordmydesktop/%{name}-%{version}.tar
 
 BuildRequires:	libalsa-devel
 BuildRequires:	libogg-devel
+BuildRequires:  pkgconfig(popt)
 BuildRequires:	pkgconfig(theora)
 BuildRequires:	pkgconfig(vorbis)
 BuildRequires:	pkgconfig(ice)
