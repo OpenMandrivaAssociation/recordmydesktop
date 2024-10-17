@@ -4,7 +4,7 @@ Version:	0.4.0
 Release:	1
 License:	GPLv2+
 Group:		Video
-URL:		http://recordmydesktop.sourceforge.net/
+URL:		https://recordmydesktop.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/recordmydesktop/%{name}-%{version}.tar.gz
 
 BuildRequires:	pkgconfig(alsa)
