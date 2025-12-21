@@ -7,6 +7,11 @@ Group:		Video
 URL:		https://recordmydesktop.sourceforge.net/
 Source0:	http://downloads.sourceforge.net/recordmydesktop/%{name}-%{version}.tar.gz
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(alsa)
 BuildRequires:	pkgconfig(ogg)
 BuildRequires:  pkgconfig(popt)
